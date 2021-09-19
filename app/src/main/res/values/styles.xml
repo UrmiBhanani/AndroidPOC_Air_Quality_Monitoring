@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="RegularText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/tv_20</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">@dimen/margin_8</item>
+        <item name="android:layout_marginStart">@dimen/margin_8</item>
+        <item name="android:layout_marginEnd">@dimen/margin_8</item>
+        <item name="android:layout_marginRight">@dimen/margin_8</item>
+    </style>
+
+    <style name="TitleText" parent="RegularText">
+        <item name="android:textSize">@dimen/tv_24</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="TableTitle" parent="RegularText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/margin_8</item>
+        <item name="android:paddingBottom">@dimen/margin_8</item>
+    </style>
+    <style name="TableRow" parent="RegularText">
+        <item name="android:textSize">@dimen/tv_18</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/margin_8</item>
+        <item name="android:paddingBottom">@dimen/margin_8</item>
+    </style>
+    <style name="DetailCountText" parent="RegularText">
+        <item name="android:textSize">@dimen/tv_72</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="CardStyle" parent="CardView.Light">
+        <!-- Card background color -->
+        <item name="cardBackgroundColor">@android:color/white</item>
+        <!-- Ripple for API 21 of android, and regular selector on older -->
+        <item name="android:foreground">?android:selectableItemBackground</item>
+        <!-- Resting Elevation from Material guidelines -->
+        <item name="cardElevation">2dp</item>
+        <!-- Add corner Radius -->
+        <item name="cardCornerRadius">2dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.AQIDashboardFragment">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/TitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:text="@string/dash_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        android:background="@color/purple_500"/>
+
+    <TextView
+        android:id="@+id/tv_title_city"
+        style="@style/TableTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/city"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintTop_toBottomOf="@+id/separator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_title_cur_aqi"/>
+
+    <TextView
+        android:id="@+id/tv_title_cur_aqi"
+        style="@style/TableTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/current_aqi"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintStart_toEndOf="@+id/tv_title_city"
+        app:layout_constraintEnd_toStartOf="@+id/tv_title_last_updt"
+        app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+    <TextView
+        android:id="@+id/tv_title_last_updt"
+        style="@style/TableTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/last_updated"
+        app:layout_constraintHorizontal_weight="4"
+        app:layout_constraintTop_toBottomOf="@+id/separator"
+        app:layout_constraintStart_toEndOf="@+id/tv_title_cur_aqi"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/no_margin"
+        android:padding="@dimen/margin_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/grey_light"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_city"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:clipToPadding="false" />
+
+    <TextView
+        android:id="@+id/txtNoRecord"
+        style="@style/RegularText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/no_margin"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_city"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="@string/no_data" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/purple_700"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

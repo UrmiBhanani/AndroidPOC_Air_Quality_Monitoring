@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AQIMonitoring</string>
+    <string name="dash_title">Air Quality Monitoring</string>
+    <string name="city">City</string>
+    <string name="current_aqi">Current AQI</string>
+    <string name="last_updated">Last Updated</string>
+    <string name="error_connection">Connection is not successful</string>
+    <string name="no_data">No data found!</string>
+    <string name="detail_title">Air Quality in %1$s</string>
+    <string name="history">History</string>
+    <string name="status_good">Good</string>
+    <string name="status_satisfactory">Satisfactory</string>
+    <string name="status_moderate">Moderate</string>
+    <string name="status_poor">Poor</string>
+    <string name="status_vpoor">Very Poor</string>
+    <string name="status_sever">Sever</string>
+</resources>
